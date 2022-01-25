@@ -18,6 +18,8 @@
 
 .item:nth-child(2) {
   flex: 3;
+  align-items: center;
+  justify-content: center;
 }
 
 .item:nth-child(3) {
