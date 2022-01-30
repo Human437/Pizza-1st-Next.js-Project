@@ -1,9 +1,9 @@
-import React from "react";
 import styles from "../../styles/Order.module.css";
 import Image from "next/image";
 
-function Order() {
+const Order = () => {
   const status = 0;
+
   const statusClass = (index) => {
     if (index - status < 1) return styles.done;
     if (index - status === 1) return styles.inProgress;
@@ -22,92 +22,70 @@ function Order() {
             </tr>
             <tr className={styles.tr}>
               <td>
-                <span className={styles.id}>123121</span>
+                <span className={styles.id}>129837819237</span>
               </td>
               <td>
-                <span className={styles.name}>John Smith</span>
+                <span className={styles.name}>John Doe</span>
               </td>
               <td>
-                <span className={styles.address}>
-                  123 West John St. New York NY 10002
-                </span>
+                <span className={styles.address}>Elton st. 212-33 LA</span>
               </td>
               <td>
-                <span className={styles.total}>$39.98</span>
+                <span className={styles.total}>$79.80</span>
               </td>
             </tr>
           </table>
         </div>
         <div className={styles.row}>
           <div className={statusClass(0)}>
-            <Image
-              alt="status icon"
-              src="/img/paid.png"
-              width={30}
-              height={30}
-            />
+            <Image src="/img/paid.png" width={30} height={30} alt="" />
             <span>Payment</span>
             <div className={styles.checkedIcon}>
               <Image
-                classname={styles.checkedIcon}
+                className={styles.checkedIcon}
                 src="/img/checked.png"
                 width={20}
                 height={20}
-                alt="check mark"
+                alt=""
               />
             </div>
           </div>
           <div className={statusClass(1)}>
-            <Image
-              alt="status icon"
-              src="/img/bake.png"
-              width={30}
-              height={30}
-            />
+            <Image src="/img/bake.png" width={30} height={30} alt="" />
             <span>Preparing</span>
             <div className={styles.checkedIcon}>
               <Image
-                classname={styles.checkedIcon}
+                className={styles.checkedIcon}
                 src="/img/checked.png"
                 width={20}
                 height={20}
-                alt="check mark"
+                alt=""
               />
             </div>
           </div>
           <div className={statusClass(2)}>
-            <Image
-              alt="status icon"
-              src="/img/bike.png"
-              width={30}
-              height={30}
-            />
+            <Image src="/img/bike.png" width={30} height={30} alt="" />
             <span>On the way</span>
             <div className={styles.checkedIcon}>
               <Image
-                classname={styles.checkedIcon}
+                className={styles.checkedIcon}
                 src="/img/checked.png"
                 width={20}
                 height={20}
-                alt="check mark"
+                alt=""
               />
             </div>
           </div>
           <div className={statusClass(3)}>
-            <Image
-              alt="status icon"
-              src="/img/delivered.png"
-              width={30}
-              height={30}
-            />
+            <Image src="/img/delivered.png" width={30} height={30} alt="" />
             <span>Delivered</span>
             <div className={styles.checkedIcon}>
               <Image
-                classname={styles.checkedIcon}
+                className={styles.checkedIcon}
                 src="/img/checked.png"
                 width={20}
                 height={20}
-                alt="check mark"
+                alt=""
               />
             </div>
           </div>
@@ -117,13 +95,13 @@ function Order() {
         <div className={styles.wrapper}>
           <h2 className={styles.title}>CART TOTAL</h2>
           <div className={styles.totalText}>
-            <b className={styles.totalTextTitle}>Subtotal:</b> $79.90
+            <b className={styles.totalTextTitle}>Subtotal:</b>$79.60
           </div>
           <div className={styles.totalText}>
-            <b className={styles.totalTextTitle}>Discount:</b> $0.00
+            <b className={styles.totalTextTitle}>Discount:</b>$0.00
           </div>
           <div className={styles.totalText}>
-            <b className={styles.totalTextTitle}>Total:</b> $79.90
+            <b className={styles.totalTextTitle}>Total:</b>$79.60
           </div>
           <button disabled className={styles.button}>
             PAID
@@ -132,6 +110,6 @@ function Order() {
       </div>
     </div>
   );
-}
+};
 
 export default Order;
